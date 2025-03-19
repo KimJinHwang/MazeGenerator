@@ -42,8 +42,13 @@ data class Room(
     }
 }
 
-class MazeGenerator() {
-    val config = readConfig("config.csv")
+class MazeGenerator(private val filePath: String) {
+
+    private val config: Map<String, String>
+    init {
+        config = readConfig(filePath)
+    }
+
     val directions = listOf("UP", "DOWN", "LEFT", "RIGHT")
     val dx = listOf(-1, 1, 0, 0)
     val dy = listOf(0, 0, -1, 1)
@@ -72,7 +77,7 @@ class MazeGenerator() {
         updateMapWithSortedPath(map, path)
         printMap(map)
 
-        saveMapToFile(map, "map_data.json")
+        //saveMapToFile(map, "map_data.json")
 
         return map
     }
