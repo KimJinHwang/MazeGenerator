@@ -1,7 +1,8 @@
+import kotlin.random.Random
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import kotlin.random.Random
 
+// Data classes
 data class MonsterGroup(
     val index: Int,
     val type: String,
@@ -18,27 +19,33 @@ data class Monster(
 
 data class Spawn(
     val monsterName: String,
-    val x: Int,
-    val y: Int,
-    val z: Int
+    val position: Triple<Float, Float, Float>?,
 )
 
-class MonsterSpawner(private val monsterGroupFilePath: String, private val monsterFilePath: String, private val targetGrade: Int) {
+data class SpawnTrigger(
+    val triggerType: String?,
+    val position: Triple<Float, Float, Float>?,
+    val distance: Int?,
+    val monsterGroup: String,
+    val weight: Int
+)
+
+class MonsterSpawner(monsterGroupFilePath: String, monsterFilePath: String) {
     private lateinit var monsterGroupList: List<MonsterGroup>
     private lateinit var monsterList: List<Monster>
 
-    init{
-        parsingMonsterGroupCSV(monsterGroupFilePath)
-        parsingMonsterCSV(monsterFilePath)
+    init {
+        parseMonsterGroupCSV(monsterGroupFilePath)
+        parseMonsterCSV(monsterFilePath)
     }
 
-    private fun parsingMonsterGroupCSV(filePath: String) {
+    private fun parseMonsterGroupCSV(filePath: String) {
         val inputStream = this::class.java.getResourceAsStream("/$filePath")
             ?: throw IllegalArgumentException("파일을 찾을 수 없습니다: $filePath")
 
         monsterGroupList = BufferedReader(InputStreamReader(inputStream)).use { reader ->
             reader.lineSequence()
-                .drop(1) // 헤더를 제거
+                .drop(1) // Remove header
                 .map { line ->
                     val columns = line.split(",")
                     MonsterGroup(
@@ -52,13 +59,13 @@ class MonsterSpawner(private val monsterGroupFilePath: String, private val monst
         }
     }
 
-    private fun parsingMonsterCSV(filePath: String) {
+    private fun parseMonsterCSV(filePath: String) {
         val inputStream = this::class.java.getResourceAsStream("/$filePath")
             ?: throw IllegalArgumentException("파일을 찾을 수 없습니다: $filePath")
 
         monsterList = BufferedReader(InputStreamReader(inputStream)).use { reader ->
             reader.lineSequence()
-                .drop(1) // 헤더를 제거
+                .drop(1) // Remove header
                 .map { line ->
                     val columns = line.split(",")
                     Monster(
@@ -70,72 +77,72 @@ class MonsterSpawner(private val monsterGroupFilePath: String, private val monst
         }
     }
 
-    fun selectMonsterGroupIndex(targetGrade: Int) : Int {
-
-        // 해당 grade의 MonsterGroup 리스트를 필터링합니다.
+    fun getSpawnsForGrade(targetGrade: Int): List<Spawn> {
+        val spawns = mutableListOf<Spawn>()
         val filteredList = monsterGroupList.filter { it.grade == targetGrade }
 
-        // 필터링된 리스트에서 랜덤하게 하나의 index를 선택합니다.
-        if (filteredList.isNotEmpty()) {
-            val randomIndex = Random.nextInt(filteredList.size)
-            val selectedIndex = filteredList[randomIndex].index
-            println("선택된 index: $selectedIndex")
-            return selectedIndex
-        } else {
-            println("grade $targetGrade 에 해당하는 데이터가 없습니다.")
+        if (filteredList.isEmpty()) {
+            println("해당 grade 몬스터 그룹이 없습니다.")
+            return emptyList()
         }
 
-        return -1
-    }
+        val selectedGroup = filteredList.random()
+        println("selectedGroup:${selectedGroup}")
 
-    fun getSpawnsForGrade(): List<Spawn> {
-        val spawns = mutableListOf<Spawn>()
+        val triggers = parseTriggerData(selectedGroup.monsterGroups)
+        val selectedSpawnTrigger = selectRandomSpawn(triggers)
 
-        // 1. targetGrade에 해당하는 몬스터 그룹 필터링
-        val filteredGroups = monsterGroupList.filter { it.grade == targetGrade }
+        val selectedMonsterGroup = monsterList.find { it.groupName == selectedSpawnTrigger.monsterGroup }
 
-        for (group in filteredGroups) {
-            val spawnXYZ = group.spawnXYZ
-            val monsterGroupEntries = group.monsterGroups.split("/")
+        selectedMonsterGroup?.monsterOffsets?.split("/")?.forEach { offsetEntry ->
+            val (monsterName, offsetStr) = offsetEntry.split("@")
+            val offsetParts = offsetStr.split(".").map { it.toFloat() }
+            val spawnXYZParts = selectedGroup.spawnXYZ.split(".").map { it.toFloat() }
 
-            for (entry in monsterGroupEntries) {
-                val groupName = entry.split("*")[0] // 예: "goblins_lv0*50" -> "goblins_lv0"
-                val matchingMonsters = monsterList.filter { it.groupName == groupName }
+            val x = spawnXYZParts[0] + offsetParts[0]
+            val y = spawnXYZParts[1] + offsetParts[1]
+            val z = spawnXYZParts[2] + offsetParts[2]
 
-                for (monster in matchingMonsters) {
-                    val offsets = monster.monsterOffsets.split("/")
-                    for (offset in offsets) {
-                        val parts = offset.split("@")
-                        val monsterName = parts[0]
-                        val coords = parts[1].split(".")
-                        if (coords.size == 3) {
-                            spawns.add(
-                                Spawn(
-                                    monsterName = monsterName,
-                                    x = coords[0].toInt(),
-                                    y = coords[1].toInt(),
-                                    z = coords[2].toInt()
-                                )
-                            )
-                        }
-                    }
-                }
-            }
+            spawns.add(Spawn(monsterName, Triple(x, y, z)))
         }
-
-        printSpawnsForGrade(spawns)
 
         return spawns
     }
 
-    fun printSpawnsForGrade(spawns: List<Spawn>) {
-        if (spawns.isEmpty()) {
-            println("해당 등급의 몬스터가 없습니다.")
-        } else {
-            println("스폰된 몬스터 리스트:")
-            spawns.forEach { spawn ->
-                println("몬스터 이름: ${spawn.monsterName}, 위치: (${spawn.x}, ${spawn.y}, ${spawn.z})")
+    private fun parseTriggerData(data: String): List<SpawnTrigger> {
+        return data.split("/").map { entry ->
+            val (triggerInfo, weightStr) = entry.split("*")
+            val weight = weightStr.toInt()
+
+            if ("@" in triggerInfo) {
+                val (triggerPart, monsterGroup) = triggerInfo.split("@")
+                val triggerComponents = triggerPart.split(":")
+
+                val triggerType = triggerComponents[0]
+                val positionParts = triggerComponents[1].split(".").map { it.toFloat() }
+                val position = Triple(positionParts[0], positionParts[1], positionParts[2])
+                val distance = triggerComponents[2].removePrefix("D").toInt()
+
+                SpawnTrigger(triggerType, position, distance, monsterGroup, weight)
+            } else {
+                SpawnTrigger(null, null, null, triggerInfo, weight)
             }
         }
+    }
+
+    private fun selectRandomSpawn(triggers: List<SpawnTrigger>): SpawnTrigger {
+        val totalWeight = triggers.sumOf { it.weight }
+        val randomValue = Random.nextInt(totalWeight)
+
+        var cumulativeWeight = 0
+        for (trigger in triggers) {
+            cumulativeWeight += trigger.weight
+            if (randomValue < cumulativeWeight) {
+                println("randvalue:${randomValue}, cumulativeWeight:${cumulativeWeight}")
+                println(trigger.monsterGroup)
+                return trigger
+            }
+        }
+        throw IllegalStateException("No spawn trigger selected, check weights.")
     }
 }

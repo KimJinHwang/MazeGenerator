@@ -3,26 +3,26 @@
   <groupId>com.stella</groupId>
   <artifactId>CreateRandomDungeon</artifactId>
   <versioning>
-    <lastUpdated>20250319085951</lastUpdated>
+    <lastUpdated>20250320014247</lastUpdated>
     <snapshot>
-      <timestamp>20250319.085951</timestamp>
-      <buildNumber>2</buildNumber>
+      <timestamp>20250320.014247</timestamp>
+      <buildNumber>3</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <extension>module</extension>
-        <value>1.0-20250319.085951-2</value>
-        <updated>20250319085951</updated>
+        <value>1.0-20250320.014247-3</value>
+        <updated>20250320014247</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.0-20250319.085951-2</value>
-        <updated>20250319085951</updated>
+        <value>1.0-20250320.014247-3</value>
+        <updated>20250320014247</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-20250319.085951-2</value>
-        <updated>20250319085951</updated>
+        <value>1.0-20250320.014247-3</value>
+        <updated>20250320014247</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
