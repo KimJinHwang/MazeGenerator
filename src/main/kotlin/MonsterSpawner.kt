@@ -1,6 +1,5 @@
+import java.io.*
 import kotlin.random.Random
-import java.io.BufferedReader
-import java.io.InputStreamReader
 
 // Data classes
 data class MonsterGroup(
@@ -30,22 +29,25 @@ data class SpawnTrigger(
     val weight: Int
 )
 
-class MonsterSpawner(monsterGroupFilePath: String, monsterFilePath: String) {
-    private lateinit var monsterGroupList: List<MonsterGroup>
-    private lateinit var monsterList: List<Monster>
+class MonsterSpawner(monsterGroupFile: File, monsterFile: File) {
+    private var monsterGroupList: List<MonsterGroup>
+    private var monsterList: List<Monster>
 
     init {
-        parseMonsterGroupCSV(monsterGroupFilePath)
-        parseMonsterCSV(monsterFilePath)
+        monsterGroupList = parseMonsterGroupCSV(monsterGroupFile)
+        monsterList = parseMonsterCSV(monsterFile)
     }
 
-    private fun parseMonsterGroupCSV(filePath: String) {
-        val inputStream = this::class.java.getResourceAsStream("/$filePath")
-            ?: throw IllegalArgumentException("파일을 찾을 수 없습니다: $filePath")
+    private fun parseMonsterGroupCSV(file: File): List<MonsterGroup> {
+        if (!file.exists()) {
+            throw FileNotFoundException("파일이 존재하지 않습니다: ${file.absolutePath}")
+        }
+        if (!file.canRead()) {
+            throw IOException("파일을 읽을 수 없습니다: ${file.absolutePath}")
+        }
 
-        monsterGroupList = BufferedReader(InputStreamReader(inputStream)).use { reader ->
-            reader.lineSequence()
-                .drop(1) // Remove header
+        return file.bufferedReader().useLines { lines ->
+            lines.drop(1) // 헤더 제거
                 .map { line ->
                     val columns = line.split(",")
                     MonsterGroup(
@@ -59,13 +61,17 @@ class MonsterSpawner(monsterGroupFilePath: String, monsterFilePath: String) {
         }
     }
 
-    private fun parseMonsterCSV(filePath: String) {
-        val inputStream = this::class.java.getResourceAsStream("/$filePath")
-            ?: throw IllegalArgumentException("파일을 찾을 수 없습니다: $filePath")
+    private fun parseMonsterCSV(file: File): List<Monster> {
+        // 파일 존재 및 읽기 가능 여부 확인
+        if (!file.exists()) {
+            throw FileNotFoundException("파일이 존재하지 않습니다: ${file.absolutePath}")
+        }
+        if (!file.canRead()) {
+            throw IOException("파일을 읽을 수 없습니다: ${file.absolutePath}")
+        }
 
-        monsterList = BufferedReader(InputStreamReader(inputStream)).use { reader ->
-            reader.lineSequence()
-                .drop(1) // Remove header
+        return file.bufferedReader().useLines { lines ->
+            lines.drop(1) // 헤더 제거
                 .map { line ->
                     val columns = line.split(",")
                     Monster(

@@ -1,9 +1,13 @@
+import java.io.File
+
 fun main() {
-//    val mazeGenerator = MazeGenerator("config.csv")
+//    val configFile = File("config.csv")
+//    val mazeGenerator = MazeGenerator(configFile)
 //    val maze = mazeGenerator.createMaze()
 
-    val spawner = MonsterSpawner("mazeSpawnTable(1.0.1)_20250318_1653.csv",
-        "monsterTable(1.0.1)_20250318_1653.csv")
+    val mazeSpawnFile = File("mazeSpawnTable(1.0.1)_20250318_1653.csv")
+    val monsterFile = File("monsterTable(1.0.1)_20250318_1653.csv")
+    val spawner = MonsterSpawner(mazeSpawnFile, monsterFile)
     val targetGrade = 4
     val spawns = spawner.getSpawnsForGrade(targetGrade)
 

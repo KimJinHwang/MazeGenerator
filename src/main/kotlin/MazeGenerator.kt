@@ -42,11 +42,11 @@ data class Room(
     }
 }
 
-class MazeGenerator(private val filePath: String) {
+class MazeGenerator(private val file: File) {
 
     private val config: Map<String, String>
     init {
-        config = readConfig(filePath)
+        config = readConfig(file)
     }
 
     val directions = listOf("UP", "DOWN", "LEFT", "RIGHT")
@@ -111,7 +111,10 @@ class MazeGenerator(private val filePath: String) {
     fun placeObstacles(map: Array<Array<Room>>, entrance: Pair<Int, Int>, exit: Pair<Int, Int>) {
         val size = config["SIZE"]?.toInt() ?: 10
         val obstacleProbability = (config["OBSTACLE_PROBABILITY"]?.toFloat()?.div(100.0f)) ?: 0.2f
-        val maxObstacles = (size * size * obstacleProbability).toInt()
+        var maxObstacles = (size * size * obstacleProbability).toInt()
+        if (maxObstacles <= size) {
+            maxObstacles = size + 1
+        }
         val obstacleCount = Random.nextInt(size, maxObstacles) // 장애물 개수는 10~20개 사이로 설정
         var count = 0
         while (count < obstacleCount) {
@@ -362,14 +365,17 @@ class MazeGenerator(private val filePath: String) {
         }
     }
 
-    fun readConfig(fileName: String): Map<String, String> {
+    fun readConfig(file: File): Map<String, String> {
         val configMap = mutableMapOf<String, String>()
-        val inputStream = object {}.javaClass.getResourceAsStream("/$fileName")
-            ?: throw IllegalArgumentException("파일을 찾을 수 없습니다: $fileName")
-        BufferedReader(InputStreamReader(inputStream)).use { reader ->
-            reader.forEachLine { line ->
-                val (key, value) = line.split(",")
-                configMap[key] = value
+        file.forEachLine { line ->
+            val trimmedLine = line.trim()
+            if (trimmedLine.isNotEmpty() && !trimmedLine.startsWith("#") && !trimmedLine.startsWith(";")) {
+                val parts = trimmedLine.split("=", limit = 2)
+                if (parts.size == 2) {
+                    val key = parts[0].trim()
+                    val value = parts[1].trim()
+                    configMap[key] = value
+                }
             }
         }
         return configMap

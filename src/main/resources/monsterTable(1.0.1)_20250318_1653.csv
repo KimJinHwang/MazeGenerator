@@ -1,9 +1,0 @@
-index,groupName,monsterOffsets
-10000,goblins_lv0,goblinsSoldier@0.0.0/goblinsSoldier@-5.0.0/goblinsSoldier@5.0.0/goblinsSoldier@0.0.-5/goblinsSoldier@0.0.5
-10001,goblins_lv1,goblinsSoldier@0.0.0/goblinsSoldier@-5.0.0/goblinsSoldier@5.0.0/goblinsSoldier@0.0.-5/goblinsSoldier@0.0.5
-10002,goblins_lv2,goblinsSoldier@0.0.0/goblinsSoldier@-5.0.0/goblinsSoldier@5.0.0/goblinsSoldier@0.0.-5/goblinsSoldier@0.0.5
-10003,goblins_lv3,goblinsSoldier@0.0.0/goblinsSoldier@-5.0.0/goblinsSoldier@5.0.0/goblinsSoldier@0.0.-5/goblinsSoldier@0.0.5
-10004,goblins_lv4,goblinsSoldier@0.0.0/goblinsSoldier@-5.0.0/goblinsSoldier@5.0.0/goblinsSoldier@0.0.-5/goblinsSoldier@0.0.5
-20000,goblinNamed_lv1,goblinsSoldier@0.0.0/goblinsSoldier@-5.0.0/goblinsSoldier@5.0.0/goblinsSoldier@0.0.-5/goblinsSoldier@0.0.5
-20001,goblinNamed_lv2,goblinsSoldier@0.0.0/goblinsSoldier@-5.0.0/goblinsSoldier@5.0.0/goblinsSoldier@0.0.-5/goblinsSoldier@0.0.5
-20002,goblinNamed_lv3,goblinsSoldier@0.0.0/goblinsSoldier@-5.0.0/goblinsSoldier@5.0.0/goblinsSoldier@0.0.-5/goblinsSoldier@0.0.5
