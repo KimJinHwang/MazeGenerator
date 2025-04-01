@@ -21,7 +21,7 @@ fun main() {
 //    MonsterSpawner_latest 사용예제
     val levelDesignFile = File("프로젝트X_몬스터 그룹 테이블 - 층별 레벨 디자인.csv")
     val spawnFile = File("프로젝트X_몬스터 그룹 테이블 - 스폰 정보.csv")
-    val spawner = MonsterSpawner_latest(levelDesignFile, spawnFile)
+    val spawner = MonsterSpawnerLatest(levelDesignFile, spawnFile)
     val targetFloor = 1
     val targetGrade = 3
     val spawns = spawner.getSpawnDetails(targetGrade, targetFloor)

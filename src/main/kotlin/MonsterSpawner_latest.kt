@@ -1,20 +1,24 @@
 import java.io.*
 import kotlin.random.Random
 
-// LevelDesignData: CSV의 각 행은 번호, 층, 등급, 컨셉, 몬스터 등장좌표, 상자 등장좌표 순서로 저장됨.
+// LevelDesignData: CSV의 각 행은 번호, 층, 등급, 컨셉, monsterSpawnCoordinate, boxSpawnCoordinate 순서로 저장됨.
 data class LevelDesignData(
     val number: Int,                      // 번호
     val floor: Int,                       // 층
     val grade: Int,                       // 등급
     val concept: String,                  // 컨셉
-    val monsterSpawnCoordinate: String,   // 몬스터 등장좌표 (기본 좌표)
-    val boxSpawnCoordinate: String        // 상자 등장좌표 (트리거 데이터 문자열)
+    val monsterSpawnCoordinate: String,   // 예: "0.0.0:FULLKEY"
+    val boxSpawnCoordinate: String        // 기존 용도 (여기서는 사용하지 않음)
 )
 
-data class Monster(
-    val index: Int,
-    val groupName: String,
-    val monsterOffsets: String
+// SpawnGroup: CSV의 각 행은 [group1, group2, group3, group4, fullKey, dropOffset] 순서로 저장됨.
+data class SpawnGroup(
+    val group1: String,
+    val group2: String,
+    val group3: String,
+    val group4: String,
+    val fullKey: String,
+    val dropOffset: String    // 예: "goblin@1.0.0/goblin@0.5.0" 등, 여러 항목은 슬래시('/')로 구분
 )
 
 data class Spawn(
@@ -22,38 +26,23 @@ data class Spawn(
     val position: Triple<Float, Float, Float>?
 )
 
-// TriggerEntry는 상자 등장좌표 문자열을 파싱한 결과로, 트리거 좌표, spawnType, triggerType, distance, 이벤트, 그리고
-// "몬스터그룹*등장확률" 조건 리스트를 포함한다.
-data class TriggerEntry(
-    val triggerCoordinate: Triple<Float, Float, Float>,
-    val spawnType: String,
-    val triggerType: String,
-    val distance: Int,
-    val event: String,
-    val triggerConditions: List<Pair<String, Int>> // (몬스터 그룹, 등장 확률)
-)
-
-// 최종적으로 반환될 결과는 트리거 정보와 선택된 triggerCondition 및 소환할 몬스터의 정보(상대 좌표 목록)를 포함한다.
+// 최종 반환 결과: 기본 좌표, fullKey, 그리고 계산된 Spawn 목록
 data class SpawnResult(
-    val triggerCoordinate: Triple<Float, Float, Float>,
-    val spawnType: String,
-    val triggerType: String,
-    val distance: Int,
-    val event: String,
-    val triggerCondition: Pair<String, Int>,
+    val baseCoordinate: Triple<Float, Float, Float>,
+    val fullKey: String,
     val spawns: List<Spawn>
 )
 
-class MonsterSpawner_latest(levelDesignFile: File, monsterFile: File) {
+class MonsterSpawnerLatest(levelDesignFile: File, spawnGroupFile: File) {
     private var levelDesignDataList: List<LevelDesignData>
-    private var monsterList: List<Monster>
+    private var spawnGroupList: List<SpawnGroup>
 
     init {
         levelDesignDataList = parseLevelDesignDataCSV(levelDesignFile)
-        monsterList = parseMonsterCSV(monsterFile)
+        spawnGroupList = parseSpawnGroupCSV(spawnGroupFile)
     }
 
-    // CSV 한 줄을 파싱하여, 큰따옴표로 묶인 필드를 하나의 값으로 처리하는 함수
+    // CSV 한 줄을 파싱하여, 큰따옴표로 묶인 필드는 하나의 값으로 처리하는 헬퍼 함수
     private fun parseCSVLine(line: String): List<String> {
         val result = mutableListOf<String>()
         val current = StringBuilder()
@@ -63,213 +52,172 @@ class MonsterSpawner_latest(levelDesignFile: File, monsterFile: File) {
             val c = line[i]
             when {
                 c == '"' -> {
-                    // 연속된 큰따옴표(")는 이스케이프 처리
                     if (inQuotes && i + 1 < line.length && line[i + 1] == '"') {
                         current.append('"')
-                        i++  // 다음 따옴표는 건너뛰기
+                        i++ // 다음 따옴표 건너뛰기
                     } else {
                         inQuotes = !inQuotes
                     }
                 }
                 c == ',' && !inQuotes -> {
-                    result.add(current.toString().trim())
+                    result.add(current.toString())
                     current.clear()
                 }
-                else -> {
-                    current.append(c)
-                }
+                else -> current.append(c)
             }
             i++
         }
-        result.add(current.toString().trim())
-        return result
+        result.add(current.toString())
+        return result.map { it.trim() }
     }
 
-    // CSV 파일을 읽어, 각 행을 번호, 층, 등급, 컨셉, 몬스터 등장좌표, 상자 등장좌표 순서로 파싱한다.
+    // LevelDesignData CSV 파싱: 번호, 층, 등급, 컨셉, monsterSpawnCoordinate, boxSpawnCoordinate
     private fun parseLevelDesignDataCSV(file: File): List<LevelDesignData> {
-        if (!file.exists()) {
-            throw FileNotFoundException("파일이 존재하지 않습니다: ${file.absolutePath}")
-        }
-        if (!file.canRead()) {
-            throw IOException("파일을 읽을 수 없습니다: ${file.absolutePath}")
-        }
+        if (!file.exists()) throw FileNotFoundException("파일이 존재하지 않습니다: ${file.absolutePath}")
+        if (!file.canRead()) throw IOException("파일을 읽을 수 없습니다: ${file.absolutePath}")
         return file.bufferedReader().useLines { lines ->
-            lines.drop(1)
-                .mapNotNull { line ->
-                    val columns = parseCSVLine(line)
-                    if (columns.size < 6) {
-                        println("잘못된 형식의 행: $line")
+            lines.drop(1).mapNotNull { line ->
+                val columns = parseCSVLine(line)
+                if (columns.size < 6) {
+                    println("잘못된 형식의 행: $line")
+                    null
+                } else {
+                    try {
+                        LevelDesignData(
+                            number = columns[0].toInt(),
+                            floor = columns[1].toInt(),
+                            grade = columns[2].toInt(),
+                            concept = columns[3],
+                            monsterSpawnCoordinate = columns[4],
+                            boxSpawnCoordinate = columns[5]
+                        )
+                    } catch (e: Exception) {
+                        println("행 파싱 오류: $line, 오류: ${e.message}")
                         null
-                    } else {
-                        try {
-                            LevelDesignData(
-                                number = columns[0].toInt(),
-                                floor = columns[1].toInt(),
-                                grade = columns[2].toInt(),
-                                concept = columns[3],
-                                monsterSpawnCoordinate = columns[4],
-                                boxSpawnCoordinate = columns[5]
-                            )
-                        } catch (e: Exception) {
-                            println("행 파싱 오류: $line, 오류: ${e.message}")
-                            null
-                        }
                     }
-                }.toList()
+                }
+            }.toList()
         }
     }
 
-    private fun parseMonsterCSV(file: File): List<Monster> {
-        if (!file.exists()) {
-            throw FileNotFoundException("파일이 존재하지 않습니다: ${file.absolutePath}")
-        }
-        if (!file.canRead()) {
-            throw IOException("파일을 읽을 수 없습니다: ${file.absolutePath}")
-        }
+    // SpawnGroup CSV 파싱: group1, group2, group3, group4, fullKey, dropOffset
+    private fun parseSpawnGroupCSV(file: File): List<SpawnGroup> {
+        if (!file.exists()) throw FileNotFoundException("파일이 존재하지 않습니다: ${file.absolutePath}")
+        if (!file.canRead()) throw IOException("파일을 읽을 수 없습니다: ${file.absolutePath}")
         return file.bufferedReader().useLines { lines ->
-            lines.drop(1)
-                .mapNotNull { line ->
-                    val columns = line.split(",").map { it.trim() }
-                    if (columns.size < 3) {
-                        println("잘못된 형식의 행: $line")
+            lines.drop(1).mapNotNull { line ->
+                val columns = parseCSVLine(line)
+                if (columns.size < 6) {
+                    println("잘못된 형식의 행: $line")
+                    null
+                } else {
+                    try {
+                        SpawnGroup(
+                            group1 = columns[0],
+                            group2 = columns[1],
+                            group3 = columns[2],
+                            group4 = columns[3],
+                            fullKey = columns[4],
+                            dropOffset = columns[5]
+                        )
+                    } catch (e: Exception) {
+                        println("SpawnGroup 행 파싱 오류: $line, 오류: ${e.message}")
                         null
-                    } else {
-                        try {
-                            Monster(
-                                index = columns[0].toInt(),
-                                groupName = columns[1],
-                                monsterOffsets = columns[2]
-                            )
-                        } catch (e: Exception) {
-                            println("행 파싱 오류: $line, 오류: ${e.message}")
-                            null
-                        }
                     }
-                }.toList()
+                }
+            }.toList()
         }
     }
 
-    // boxSpawnCoordinate 문자열을 콤마(,) 단위로 분리한 후, 각 항목을 파싱하여 TriggerEntry 객체 리스트로 변환
-    private fun parseTriggerEntries(data: String): List<TriggerEntry> {
-        return data.split(",").mapNotNull { entry ->
-            val trimmedEntry = entry.trim()
-            if (trimmedEntry.isEmpty()) return@mapNotNull null
-            val parts = trimmedEntry.split(":")
-            if (parts.size != 3) {
-                println("잘못된 트리거 형식: $entry")
-                return@mapNotNull null
+    private fun selectRandomSpawn(triggers: List<SpawnTrigger>): SpawnTrigger {
+        val totalWeight = triggers.sumOf { it.weight }
+        val randomValue = Random.nextInt(totalWeight)
+
+        var cumulativeWeight = 0
+        for (trigger in triggers) {
+            cumulativeWeight += trigger.weight
+            if (randomValue < cumulativeWeight) {
+                println("randvalue:${randomValue}, cumulativeWeight:${cumulativeWeight}")
+                println(trigger.monsterGroup)
+                return trigger
             }
+        }
+        throw IllegalStateException("No spawn trigger selected, check weights.")
+    }
+
+    // monsterSpawnCoordinate 파싱: "x.y.z:FULLKEY" 형식으로 가정
+    private fun parseMonsterSpawnCoordinate(data: String): Pair<Triple<Float, Float, Float>, String>? {
+        val parts = data.split(",").map { it.trim() }
+        // parts의 수만큼 (스폰 지역수)
+        for (part in parts) {
             try {
-                val coordParts = parts[0].split(".").map { it.trim().toFloat() }
-                if (coordParts.size < 3) {
-                    println("잘못된 좌표 형식: ${parts[0]}")
-                    return@mapNotNull null
+                val spawnPoints = part.split(":").map { it.trim() }
+                if (spawnPoints.size < 3) {
+                    println("잘못된 소환데이터 형식: $spawnPoints")
+                    return null
                 }
-                val triggerCoordinate = Triple(coordParts[0], coordParts[1], coordParts[2])
-
-                val detailParts = parts[1].split(".").map { it.trim() }
-                if (detailParts.size < 4) {
-                    println("잘못된 세부 형식: ${parts[1]}")
-                    return@mapNotNull null
-                }
-                val spawnType = detailParts[0]
-                val triggerType = detailParts[1]
-                val distance = detailParts[2].toInt()
-                val event = detailParts[3]
-
-                val conditionEntries = parts[2].split("/").mapNotNull { cond ->
-                    val condParts = cond.split("*").map { it.trim() }
-                    if (condParts.size != 2) {
-                        println("잘못된 조건 형식: $cond")
-                        null
-                    } else {
-                        val monsterGroup = condParts[0]
-                        val probability = condParts[1].toInt()
-                        Pair(monsterGroup, probability)
-                    }
-                }
-                TriggerEntry(triggerCoordinate, spawnType, triggerType, distance, event, conditionEntries)
-            } catch(e: Exception) {
-                println("트리거 파싱 오류: $entry, 오류: ${e.message}")
-                null
+                return Pair(Triple(coordParts[0], coordParts[1], coordParts[2]), parts[1])
+            } catch (e: Exception) {
+                println("monsterSpawnCoordinate 파싱 오류: $data, 오류: ${e.message}")
+                return null
             }
         }
     }
 
+    // targetGrade와 targetFloor에 해당하는 LevelDesignData의 monsterSpawnCoordinate를 파싱하고,
+    // fullKey에 맞는 SpawnGroup의 dropOffset을 사용하여 spawn 정보를 구성한다.
     fun getSpawnDetails(targetGrade: Int, targetFloor: Int): List<SpawnResult> {
         val results = mutableListOf<SpawnResult>()
         // 목표 등급과 층에 해당하는 LevelDesignData 필터링
-        val filteredGroups = levelDesignDataList.filter { it.grade == targetGrade && it.floor == targetFloor }
-        if (filteredGroups.isEmpty()) {
+        val filteredLevels = levelDesignDataList.filter { it.grade == targetGrade && it.floor == targetFloor }
+        if (filteredLevels.isEmpty()) {
             println("해당 등급($targetGrade)과 층($targetFloor)의 레벨 디자인 데이터가 없습니다.")
             return emptyList()
         }
-        for (group in filteredGroups) {
-            // boxSpawnCoordinate를 파싱하여 트리거 항목들로 변환
-            val triggerEntries = parseTriggerEntries(group.boxSpawnCoordinate)
-            for (triggerEntry in triggerEntries) {
-                // triggerConditions의 가중치를 바탕으로 랜덤하게 조건 선택
-                val totalWeight = triggerEntry.triggerConditions.sumOf { it.second }
-                val randVal = Random.nextInt(totalWeight)
-                var cumulative = 0
-                var selectedCondition: Pair<String, Int>? = null
-                for (cond in triggerEntry.triggerConditions) {
-                    cumulative += cond.second
-                    if (randVal < cumulative) {
-                        selectedCondition = cond
-                        break
-                    }
-                }
-                if (selectedCondition == null) {
-                    println("조건 선택 실패 (가중치 문제)")
-                    continue
-                }
-                // 선택된 조건의 몬스터 그룹 이름과 일치하는 Monster 검색
-                val monster = monsterList.find { it.groupName == selectedCondition.first }
-                if (monster == null) {
-                    println("해당 monster group을 찾을 수 없습니다: ${selectedCondition.first}")
-                    continue
-                }
-                // monsterSpawnCoordinate(기본 좌표)와 Monster의 monsterOffsets를 결합해 소환 좌표 계산
-                val spawns = mutableListOf<Spawn>()
-                val baseCoordinateParts = group.monsterSpawnCoordinate.split(".").map { it.trim().toFloat() }
-                if (baseCoordinateParts.size < 3) {
-                    println("잘못된 monsterSpawnCoordinate 형식: ${group.monsterSpawnCoordinate}")
-                    continue
-                }
-                monster.monsterOffsets.split("/").forEach { offsetEntry ->
+        for (level in filteredLevels) {
+            // monsterSpawnCoordinate는 "x.y.z:FULLKEY" 형식임
+            val spawnInfo = parseMonsterSpawnCoordinate(level.monsterSpawnCoordinate) ?: continue
+            val (baseCoordinate, fullKey) = spawnInfo
+            // fullKey에 해당하는 SpawnGroup 검색
+            val spawnGroup = spawnGroupList.find { it.fullKey == fullKey }
+            if (spawnGroup == null) {
+                println("fullKey가 '$fullKey'인 SpawnGroup을 찾을 수 없습니다.")
+                continue
+            }
+            // dropOffset을 파싱하여 Spawn 목록 생성
+            // dropOffset 형식: "monsterName@dx.dy.dz/monsterName@dx.dy.dz/..."
+            val spawns = mutableListOf<Spawn>()
+            spawnGroup.dropOffset.split("/")
+                .map { it.trim() }
+                .filter { it.isNotEmpty() }
+                .forEach { offsetEntry ->
                     val parts = offsetEntry.split("@").map { it.trim() }
                     if (parts.size != 2) {
-                        println("잘못된 offset 형식: $offsetEntry")
+                        println("잘못된 dropOffset 형식: $offsetEntry")
                         return@forEach
                     }
                     val monsterName = parts[0]
                     try {
-                        val offsetParts = parts[1].split(".").map { it.trim().toFloat() }
+                        val offsetParts = parts[1].split(".").map { it.toFloat() }
                         if (offsetParts.size < 3) {
-                            println("잘못된 좌표 형식: $offsetEntry")
+                            println("잘못된 오프셋 좌표 형식: $offsetEntry")
                             return@forEach
                         }
-                        val x = baseCoordinateParts[0] + offsetParts[0]
-                        val y = baseCoordinateParts[1] + offsetParts[1]
-                        val z = baseCoordinateParts[2] + offsetParts[2]
+                        val x = baseCoordinate.first + offsetParts[0]
+                        val y = baseCoordinate.second + offsetParts[1]
+                        val z = baseCoordinate.third + offsetParts[2]
                         spawns.add(Spawn(monsterName, Triple(x, y, z)))
-                    } catch(e: Exception) {
-                        println("좌표 파싱 오류: $offsetEntry, 오류: ${e.message}")
+                    } catch (e: Exception) {
+                        println("dropOffset 좌표 파싱 오류: $offsetEntry, 오류: ${e.message}")
                     }
                 }
-                results.add(
-                    SpawnResult(
-                        triggerCoordinate = triggerEntry.triggerCoordinate,
-                        spawnType = triggerEntry.spawnType,
-                        triggerType = triggerEntry.triggerType,
-                        distance = triggerEntry.distance,
-                        event = triggerEntry.event,
-                        triggerCondition = selectedCondition,
-                        spawns = spawns
-                    )
+            results.add(
+                SpawnResult(
+                    baseCoordinate = baseCoordinate,
+                    fullKey = fullKey,
+                    spawns = spawns
                 )
-            }
+            )
         }
         return results
     }
