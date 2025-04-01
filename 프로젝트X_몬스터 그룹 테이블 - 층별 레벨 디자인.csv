@@ -1,0 +1,586 @@
+번호,층,등급,컨셉,몬스터 등장좌표,상자 등장좌표
+1,1,1,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+1.2.3:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+2.3.4:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+2,1,2,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+1.1.2:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+3.4.5:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+3,1,3,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+4,1,4,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+5,1,5,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+6,2,1,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+7,2,2,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+8,2,3,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+9,2,4,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+10,2,5,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+11,3,1,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+12,3,2,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+13,3,3,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+14,3,4,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+15,3,5,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+16,4,1,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+17,4,2,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+18,4,3,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+19,4,4,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+20,4,5,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+21,5,1,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+22,5,2,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+23,5,3,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+24,5,4,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+25,5,5,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+26,6,1,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+27,6,2,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+28,6,3,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+29,6,4,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+30,6,5,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+31,7,1,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+32,7,2,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+33,7,3,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+34,7,4,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+35,7,5,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+36,8,1,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+37,8,2,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+38,8,3,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+39,8,4,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+40,8,5,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+41,9,1,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+42,9,2,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+43,9,3,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+44,9,4,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+45,9,5,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+46,10,1,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+47,10,2,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+48,10,3,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+49,10,4,cave,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+50,10,5,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+51,11,1,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+52,11,2,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+53,11,3,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+54,11,4,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+55,11,5,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+56,12,1,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+57,12,2,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+58,12,3,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+59,12,4,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+60,12,5,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+61,13,1,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+62,13,2,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+63,13,3,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+64,13,4,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+65,13,5,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+66,14,1,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+67,14,2,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+68,14,3,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+69,14,4,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+70,14,5,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+71,15,1,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+72,15,2,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+73,15,3,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+74,15,4,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+75,15,5,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+76,16,1,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+77,16,2,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+78,16,3,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+79,16,4,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+80,16,5,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+81,17,1,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+82,17,2,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+83,17,3,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+84,17,4,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+85,17,5,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+86,18,1,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+87,18,2,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+88,18,3,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+89,18,4,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+90,18,5,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+91,19,1,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+92,19,2,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+93,19,3,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+94,19,4,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+95,19,5,저택,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+96,20,1,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+97,20,2,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+98,20,3,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+99,20,4,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+100,20,5,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+101,21,1,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+102,21,2,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+103,21,3,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+104,21,4,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+105,21,5,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+106,22,1,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+107,22,2,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+108,22,3,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+109,22,4,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+110,22,5,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+111,23,1,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+112,23,2,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+113,23,3,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+114,23,4,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+115,23,5,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+116,24,1,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+117,24,2,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+118,24,3,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+119,24,4,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+120,24,5,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+121,25,1,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+122,25,2,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+123,25,3,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+124,25,4,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+125,25,5,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+126,26,1,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+127,26,2,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+128,26,3,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+129,26,4,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+130,26,5,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+131,27,1,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+132,27,2,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+133,27,3,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+134,27,4,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+135,27,5,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+136,28,1,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+137,28,2,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+138,28,3,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+139,28,4,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+140,28,5,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+141,29,1,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+142,29,2,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+143,29,3,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+144,29,4,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+145,29,5,정글,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+146,30,1,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+147,30,2,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+148,30,3,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+149,30,4,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+150,30,5,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+151,31,1,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+152,31,2,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+153,31,3,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+154,31,4,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+155,31,5,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+156,32,1,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+157,32,2,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+158,32,3,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+159,32,4,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+160,32,5,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+161,33,1,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+162,33,2,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+163,33,3,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+164,33,4,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+165,33,5,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+166,34,1,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+167,34,2,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+168,34,3,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+169,34,4,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+170,34,5,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+171,35,1,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+172,35,2,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+173,35,3,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+174,35,4,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+175,35,5,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+176,36,1,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+177,36,2,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+178,36,3,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+179,36,4,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+180,36,5,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+181,37,1,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+182,37,2,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+183,37,3,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+184,37,4,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+185,37,5,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+186,38,1,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+187,38,2,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+188,38,3,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+189,38,4,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+190,38,5,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+191,39,1,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+192,39,2,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+193,39,3,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+194,39,4,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)
+195,39,5,늪지,"0.0.0:respawn.box.5.enter:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:single.box.3.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10,
+0.0.0:respawn.box.5.exit:spawn.goblin.goblins_lv1*50/spawn.goblin.goblins_lv1*25/spawn.goblin.goblins_lv1*10",null(아직 없음)

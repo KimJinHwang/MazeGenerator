@@ -1,0 +1,10 @@
+group1,group2,group3,group4,fullKey,dropOffsets
+spawn,monster,goblin,goblins_lv1,spawn.goblin.goblins_lv1,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,goblins_lv2,spawn.goblin.goblins_lv2,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,goblins_lv3,spawn.goblin.goblins_lv3,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,goblins_lv4,spawn.goblin.goblins_lv4,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,goblins_lv5,spawn.goblin.goblins_lv5,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,goblinNamed_lv1,spawn.goblin.goblinNamed_lv1,gb_hobgoblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,goblinNamed_lv2,spawn.goblin.goblinNamed_lv2,gb_hobgoblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,goblinNamed_lv3,spawn.goblin.goblinNamed_lv3,gb_hobgoblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,root,box,potion_lv1,spawn.box.potion_lv1,null(아직 없음)
