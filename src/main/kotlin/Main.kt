@@ -19,15 +19,18 @@ fun main() {
 //    }
 
 //    MonsterSpawner_latest 사용예제
-    val levelDesignFile = File("프로젝트X_몬스터 그룹 테이블 - 층별 레벨 디자인.csv")
-    val spawnFile = File("프로젝트X_몬스터 그룹 테이블 - 스폰 정보.csv")
-    val spawner = MonsterSpawnerLatest(levelDesignFile, spawnFile)
-    val targetFloor = 1
-    val targetGrade = 3
-    val spawns = spawner.getSpawnDetails(targetGrade, targetFloor)
+    val spawner = MonsterSpawner(
+        File("프로젝트X_몬스터 그룹 테이블 - 층별 레벨 디자인.csv"),
+        File("프로젝트X_몬스터 그룹 테이블 - 스폰 정보.csv")
+    )
 
-    println("스폰된 몬스터 리스트")
-    spawns.forEach { spawnData ->
-        println("반환 데이터 확인 : $spawnData")
+    val results = spawner.getFinalSpawnResults(targetFloor = 1, targetGrade = 1)
+
+    results.forEach {
+        println("위치: ${it.position}, 트리거: ${it.triggerInfo}, 그룹: ${it.selectedFullKey}")
+        println("드랍 몬스터들:")
+        it.dropOffsets.forEach { drop ->
+            println("  - ${drop.monsterName} @ ${drop.offset}")
+        }
     }
 }

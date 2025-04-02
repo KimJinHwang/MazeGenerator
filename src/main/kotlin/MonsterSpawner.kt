@@ -1,154 +1,260 @@
-//import java.io.*
-//import kotlin.random.Random
-//
-//// Data classes
-//data class MonsterGroup(
-//    val index: Int,
-//    val type: String,
-//    val grade: Int,
-//    val spawnXYZ: String,
-//    val monsterGroups: String
-//)
-//
-//data class Monster(
-//    val index: Int,
-//    val groupName: String,
-//    val monsterOffsets: String
-//)
-//
-//data class Spawn(
-//    val monsterName: String,
-//    val position: Triple<Float, Float, Float>?,
-//)
-//
-//data class SpawnTrigger(
-//    val triggerType: String?,
-//    val position: Triple<Float, Float, Float>?,
-//    val distance: Int?,
-//    val monsterGroup: String,
-//    val weight: Int
-//)
-//
-//class MonsterSpawner(monsterGroupFile: File, monsterFile: File) {
-//    private var monsterGroupList: List<MonsterGroup>
-//    private var monsterList: List<Monster>
-//
-//    init {
-//        monsterGroupList = parseMonsterGroupCSV(monsterGroupFile)
-//        monsterList = parseMonsterCSV(monsterFile)
-//    }
-//
-//    private fun parseMonsterGroupCSV(file: File): List<MonsterGroup> {
-//        if (!file.exists()) {
-//            throw FileNotFoundException("파일이 존재하지 않습니다: ${file.absolutePath}")
-//        }
-//        if (!file.canRead()) {
-//            throw IOException("파일을 읽을 수 없습니다: ${file.absolutePath}")
-//        }
-//
-//        return file.bufferedReader().useLines { lines ->
-//            lines.drop(1) // 헤더 제거
-//                .map { line ->
-//                    val columns = line.split(",")
-//                    MonsterGroup(
-//                        index = columns[0].toInt(),
-//                        type = columns[1],
-//                        grade = columns[2].toInt(),
-//                        spawnXYZ = columns[3],
-//                        monsterGroups = columns[4]
-//                    )
-//                }.toList()
-//        }
-//    }
-//
-//    private fun parseMonsterCSV(file: File): List<Monster> {
-//        // 파일 존재 및 읽기 가능 여부 확인
-//        if (!file.exists()) {
-//            throw FileNotFoundException("파일이 존재하지 않습니다: ${file.absolutePath}")
-//        }
-//        if (!file.canRead()) {
-//            throw IOException("파일을 읽을 수 없습니다: ${file.absolutePath}")
-//        }
-//
-//        return file.bufferedReader().useLines { lines ->
-//            lines.drop(1) // 헤더 제거
-//                .map { line ->
-//                    val columns = line.split(",")
-//                    Monster(
-//                        index = columns[0].toInt(),
-//                        groupName = columns[1],
-//                        monsterOffsets = columns[2]
-//                    )
-//                }.toList()
-//        }
-//    }
-//
-//    fun getSpawnsForGrade(targetGrade: Int): List<Spawn> {
-//        val spawns = mutableListOf<Spawn>()
-//        val filteredList = monsterGroupList.filter { it.grade == targetGrade }
-//
-//        if (filteredList.isEmpty()) {
-//            println("해당 grade 몬스터 그룹이 없습니다.")
-//            return emptyList()
-//        }
-//
-//        val selectedGroup = filteredList.random()
-//        println("selectedGroup:${selectedGroup}")
-//
-//        val triggers = parseTriggerData(selectedGroup.monsterGroups)
-//        val selectedSpawnTrigger = selectRandomSpawn(triggers)
-//
-//        val selectedMonsterGroup = monsterList.find { it.groupName == selectedSpawnTrigger.monsterGroup }
-//
-//        selectedMonsterGroup?.monsterOffsets?.split("/")?.forEach { offsetEntry ->
-//            val (monsterName, offsetStr) = offsetEntry.split("@")
-//            val offsetParts = offsetStr.split(".").map { it.toFloat() }
-//            val spawnXYZParts = selectedGroup.spawnXYZ.split(".").map { it.toFloat() }
-//
-//            val x = spawnXYZParts[0] + offsetParts[0]
-//            val y = spawnXYZParts[1] + offsetParts[1]
-//            val z = spawnXYZParts[2] + offsetParts[2]
-//
-//            spawns.add(Spawn(monsterName, Triple(x, y, z)))
-//        }
-//
-//        return spawns
-//    }
-//
-//    private fun parseTriggerData(data: String): List<SpawnTrigger> {
-//        return data.split("/").map { entry ->
-//            val (triggerInfo, weightStr) = entry.split("*")
-//            val weight = weightStr.toInt()
-//
-//            if ("@" in triggerInfo) {
-//                val (triggerPart, monsterGroup) = triggerInfo.split("@")
-//                val triggerComponents = triggerPart.split(":")
-//
-//                val triggerType = triggerComponents[0]
-//                val positionParts = triggerComponents[1].split(".").map { it.toFloat() }
-//                val position = Triple(positionParts[0], positionParts[1], positionParts[2])
-//                val distance = triggerComponents[2].removePrefix("D").toInt()
-//
-//                SpawnTrigger(triggerType, position, distance, monsterGroup, weight)
-//            } else {
-//                SpawnTrigger(null, null, null, triggerInfo, weight)
-//            }
-//        }
-//    }
-//
-//    private fun selectRandomSpawn(triggers: List<SpawnTrigger>): SpawnTrigger {
-//        val totalWeight = triggers.sumOf { it.weight }
-//        val randomValue = Random.nextInt(totalWeight)
-//
-//        var cumulativeWeight = 0
-//        for (trigger in triggers) {
-//            cumulativeWeight += trigger.weight
-//            if (randomValue < cumulativeWeight) {
-//                println("randvalue:${randomValue}, cumulativeWeight:${cumulativeWeight}")
-//                println(trigger.monsterGroup)
-//                return trigger
-//            }
-//        }
-//        throw IllegalStateException("No spawn trigger selected, check weights.")
-//    }
-//}
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.IOException
+import kotlin.random.Random
+
+// CSV 매핑용 데이터 클래스
+
+data class LevelDesignData(
+    val number: Int,
+    val floor: Int,
+    val grade: Int,
+    val concept: String,
+    val monsterSpawnCoordinate: List<MonsterSpawnData>,
+    val boxSpawnCoordinate: String
+)
+
+data class MonsterSpawnData(
+    val position: Triple<Float, Float, Float>,
+    val triggerInfo: TriggerInfo,
+    val monsterGroups: List<MonsterGroupSpawn>
+)
+
+data class TriggerInfo(
+    val spawnType: String,
+    val triggerShape: String,
+    val triggerRange: String,
+    val triggerAction: String
+)
+
+data class MonsterGroupSpawn(
+    val fullKey: String,
+    val probability: Float
+)
+
+data class SpawnGroup(
+    val group1: String,
+    val group2: String,
+    val group3: String,
+    val group4: String,
+    val fullKey: String,
+    val dropOffset: String
+)
+
+data class DropOffsetEntry(
+    val monsterName: String,
+    val offset: Triple<Float, Float, Float>
+)
+
+data class FinalSpawnResult(
+    val position: Triple<Float, Float, Float>,
+    val triggerInfo: TriggerInfo,
+    val selectedFullKey: String,
+    val dropOffsets: List<DropOffsetEntry>
+)
+
+class MonsterSpawner(
+    levelDesignFile: File,
+    spawnInfoFile: File
+) {
+    private val levelData: List<LevelDesignData>
+    private val spawnGroups: List<SpawnGroup>
+
+    init {
+        levelData = parseLevelDesignFile(levelDesignFile)
+        spawnGroups = parseSpawnGroupFile(spawnInfoFile)
+    }
+
+    fun getFinalSpawnResults(targetFloor: Int, targetGrade: Int): List<FinalSpawnResult> {
+        val filtered = levelData.filter { it.floor == targetFloor && it.grade == targetGrade }
+        if (filtered.isEmpty()) return emptyList()
+
+        val results = mutableListOf<FinalSpawnResult>()
+
+        for (level in filtered) {
+            for (spawn in level.monsterSpawnCoordinate) {
+                val totalWeight = spawn.monsterGroups.sumOf { it.probability.toDouble() }
+                if (totalWeight <= 0.0) continue
+
+                val rand = Random.nextDouble(totalWeight)
+                var cumulative = 0.0
+                var selectedKey: String? = null
+
+                for (group in spawn.monsterGroups) {
+                    cumulative += group.probability
+                    if (rand <= cumulative) {
+                        selectedKey = group.fullKey
+                        break
+                    }
+                }
+
+                selectedKey?.let { key ->
+                    val matchedGroup = spawnGroups.find { it.fullKey == key }
+                    val dropOffsets = matchedGroup?.let { parseDropOffset(it.dropOffset) } ?: emptyList()
+
+                    results.add(
+                        FinalSpawnResult(
+                            position = spawn.position,
+                            triggerInfo = spawn.triggerInfo,
+                            selectedFullKey = key,
+                            dropOffsets = dropOffsets
+                        )
+                    )
+                }
+            }
+        }
+
+        return results
+    }
+
+    fun parseDropOffset(dropOffset: String): List<DropOffsetEntry> {
+        return dropOffset.split("/").mapNotNull { entry ->
+            val parts = entry.split("@").map { it.trim() }
+            if (parts.size != 2) return@mapNotNull null
+            try {
+                val coords = parts[1].split(".").map { it.toFloat() }
+                if (coords.size != 3) return@mapNotNull null
+                DropOffsetEntry(
+                    monsterName = parts[0],
+                    offset = Triple(coords[0], coords[1], coords[2])
+                )
+            } catch (e: Exception) {
+                println("DropOffset 파싱 오류: $entry, 오류: ${e.message}")
+                null
+            }
+        }
+    }
+
+    private fun parseLevelDesignFile(file: File): List<LevelDesignData> {
+        return file.bufferedReader().useLines { lines ->
+            lines.drop(1)
+                .mapNotNull { line -> parseLevelLine(line) }
+                .toList()
+        }
+    }
+
+    private fun parseSpawnGroupFile(spawnFile: File): List<SpawnGroup> {
+        return spawnFile.bufferedReader().useLines { lines ->
+            lines.drop(1)
+                .mapNotNull { line ->
+                    val columns = parseCSVLine(line)
+                    if (columns.size < 6) {
+                        println("잘못된 SpawnGroup 행: $line")
+                        null
+                    } else {
+                        try {
+                            SpawnGroup(
+                                group1 = columns[0],
+                                group2 = columns[1],
+                                group3 = columns[2],
+                                group4 = columns[3],
+                                fullKey = columns[4],
+                                dropOffset = columns[5]
+                            )
+                        } catch (e: Exception) {
+                            println("SpawnGroup 파싱 오류: $line, 오류: ${e.message}")
+                            null
+                        }
+                    }
+                }.toList()
+        }
+    }
+
+    private fun parseLevelLine(line: String): LevelDesignData? {
+        val columns = parseCSVLine(line)
+        if (columns.size < 6) {
+            println("잘못된 행: $line")
+            return null
+        }
+
+        return try {
+            val monsterDataList = parseMonsterSpawnCoordinate(columns[4])
+            LevelDesignData(
+                number = columns[0].toInt(),
+                floor = columns[1].toInt(),
+                grade = columns[2].toInt(),
+                concept = columns[3],
+                monsterSpawnCoordinate = monsterDataList,
+                boxSpawnCoordinate = columns[5]
+            )
+        } catch (e: Exception) {
+            println("행 파싱 실패: $line, 오류: ${e.message}")
+            null
+        }
+    }
+
+    private fun parseMonsterSpawnCoordinate(data: String): List<MonsterSpawnData> {
+        return data.split(",").mapNotNull { part ->
+            val pieces = part.split(":").map { it.trim() }
+            if (pieces.size < 3) {
+                println("monsterSpawnCoordinate 파싱 오류: $part")
+                return@mapNotNull null
+            }
+
+            try {
+                val positionParts = pieces[0].split(".").map { it.toFloat() }
+                val position = Triple(positionParts[0], positionParts[1], positionParts[2])
+
+                val triggerParts = pieces[1].split(".")
+                val trigger = TriggerInfo(
+                    spawnType = triggerParts.getOrNull(0) ?: "",
+                    triggerShape = triggerParts.getOrNull(1) ?: "",
+                    triggerRange = triggerParts.getOrNull(2) ?: "",
+                    triggerAction = triggerParts.getOrNull(3) ?: ""
+                )
+
+                val monsterGroups = pieces[2].split("/").mapNotNull { entry ->
+                    val subparts = entry.split("*").map { it.trim() }
+                    if (subparts.size != 2) return@mapNotNull null
+                    try {
+                        MonsterGroupSpawn(
+                            fullKey = subparts[0],
+                            probability = subparts[1].toFloat()
+                        )
+                    } catch (e: Exception) {
+                        println("몬스터 그룹 파싱 오류: $entry")
+                        null
+                    }
+                }
+
+                MonsterSpawnData(
+                    position = position,
+                    triggerInfo = trigger,
+                    monsterGroups = monsterGroups
+                )
+            } catch (e: Exception) {
+                println("좌표 파싱 오류: $part, 오류: ${e.message}")
+                null
+            }
+        }
+    }
+
+    private fun parseCSVLine(line: String): List<String> {
+        val result = mutableListOf<String>()
+        val current = StringBuilder()
+        var inQuotes = false
+        var i = 0
+
+        while (i < line.length) {
+            val c = line[i]
+            when {
+                c == '"' -> {
+                    if (inQuotes && i + 1 < line.length && line[i + 1] == '"') {
+                        current.append('"')
+                        i++
+                    } else {
+                        inQuotes = !inQuotes
+                    }
+                }
+                c == ',' && !inQuotes -> {
+                    result.add(current.toString())
+                    current.clear()
+                }
+                else -> current.append(c)
+            }
+            i++
+        }
+        result.add(current.toString())
+        return result.map { it.trim() }
+    }
+}
