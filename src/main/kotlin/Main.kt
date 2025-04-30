@@ -19,18 +19,15 @@ fun main() {
 //    }
 
 //    MonsterSpawner_latest 사용예제
-    val spawner = MonsterSpawner(
+    val spawner = MonsterItemSpawner(
         File("프로젝트X_몬스터 그룹 테이블 - 층별 레벨 디자인.csv"),
-        File("프로젝트X_몬스터 그룹 테이블 - 스폰 정보.csv")
+        File("프로젝트X_몬스터 그룹 테이블 - 몬스터 스폰.csv"),
+        File("프로젝트X_몬스터 그룹 테이블 - 상자 스폰.csv")
     )
 
-    val results = spawner.getFinalSpawnResults(targetFloor = 1, targetGrade = 1)
+    val results = spawner.getFinalSpawnResults(targetFloor = 1, targetGrade = 3)
+    results.forEach { println(it) }
 
-    results.forEach {
-        println("위치: ${it.position}, 트리거: ${it.triggerInfo}, 그룹: ${it.selectedFullKey}")
-        println("드랍 몬스터들:")
-        it.dropOffsets.forEach { drop ->
-            println("  - ${drop.monsterName} @ ${drop.offset}")
-        }
-    }
+    val chestResults = spawner.getChestSpawnResults(1, 1)
+    chestResults.forEach { println(it) }
 }

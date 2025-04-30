@@ -1,0 +1,36 @@
+group1,group2,group3,group4,group5,group6,fullKey,dropOffsets
+spawn,monster,goblin,cave_1,1,goblins_lv1,spawn.monster.goblin.cave_1.1.goblins_lv1,gb_goblin_archer@1@6.-44.29/gb_goblin@1@-5.-42.19/gb_goblin@1@8.-42.18/gb_goblin_outlaw@1@4.-42.20
+spawn,monster,goblin,cave_1,1,goblins_lv2,spawn.monster.goblin.cave_1.1.goblins_lv2,gb_goblin_archer@2@6.-44.29/gb_goblin@1@-5.-42.19/gb_goblin@1@8.-42.18/gb_goblin_outlaw@1@4.-42.20
+spawn,monster,goblin,cave_1,1,goblins_lv3,spawn.monster.goblin.cave_1.1.goblins_lv3,gb_goblin_archer@3@6.-44.29/gb_goblin@1@-5.-42.19/gb_goblin@1@8.-42.18/gb_goblin_outlaw@1@4.-42.20
+spawn,monster,goblin,cave_1,1,goblins_lv4,spawn.monster.goblin.cave_1.1.goblins_lv4,gb_goblin_archer@4@6.-44.29/gb_goblin@1@-5.-42.19/gb_goblin@1@8.-42.18/gb_goblin_outlaw@1@4.-42.20
+spawn,monster,goblin,cave_1,1,goblins_lv5,spawn.monster.goblin.cave_1.1.goblins_lv5,gb_goblin_archer@5@6.-44.29/gb_goblin@1@-5.-42.19/gb_goblin@1@8.-42.18/gb_goblin_outlaw@1@4.-42.20
+spawn,monster,goblin,cave_2,1,goblins_lv1,spawn.monster.goblin.cave_2.1.goblins_lv1,gb_goblin_archer@1@6.-44.29/gb_goblin@1@-5.-42.19/gb_goblin@1@8.-42.18/gb_goblin_outlaw@1@4.-42.20
+spawn,monster,goblin,cave_2,1,goblins_lv2,spawn.monster.goblin.cave_2.1.goblins_lv2,gb_goblin_archer@1@6.-44.29/gb_goblin@1@-5.-42.19/gb_goblin@1@8.-42.18/gb_goblin_outlaw@1@4.-42.20
+spawn,monster,goblin,cave_2,1,goblins_lv3,spawn.monster.goblin.cave_2.1.goblins_lv3,gb_goblin_archer@1@6.-44.29/gb_goblin@1@-5.-42.19/gb_goblin@1@8.-42.18/gb_goblin_outlaw@1@4.-42.20
+spawn,monster,goblin,cave_2,1,goblins_lv4,spawn.monster.goblin.cave_2.1.goblins_lv4,gb_goblin_archer@1@6.-44.29/gb_goblin@1@-5.-42.19/gb_goblin@1@8.-42.18/gb_goblin_outlaw@1@4.-42.20
+spawn,monster,goblin,cave_2,1,goblins_lv5,spawn.monster.goblin.cave_2.1.goblins_lv5,gb_goblin_archer@1@6.-44.29/gb_goblin@1@-5.-42.19/gb_goblin@1@8.-42.18/gb_goblin_outlaw@1@4.-42.20
+spawn,monster,goblin,cave_3,1,goblins_lv1,spawn.monster.goblin.cave_3.1.goblins_lv1,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_3,1,goblins_lv2,spawn.monster.goblin.cave_3.1.goblins_lv2,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_3,1,goblins_lv3,spawn.monster.goblin.cave_3.1.goblins_lv3,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_3,1,goblins_lv4,spawn.monster.goblin.cave_3.1.goblins_lv4,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_3,1,goblins_lv5,spawn.monster.goblin.cave_3.1.goblins_lv5,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_4,1,goblins_lv1,spawn.monster.goblin.cave_4.1.goblins_lv1,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_4,1,goblins_lv2,spawn.monster.goblin.cave_4.1.goblins_lv2,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_4,1,goblins_lv3,spawn.monster.goblin.cave_4.1.goblins_lv3,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_4,1,goblins_lv4,spawn.monster.goblin.cave_4.1.goblins_lv4,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_4,1,goblins_lv5,spawn.monster.goblin.cave_4.1.goblins_lv5,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_5,1,goblins_lv1,spawn.monster.goblin.cave_5.1.goblins_lv1,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_5,1,goblins_lv2,spawn.monster.goblin.cave_5.1.goblins_lv2,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_5,1,goblins_lv3,spawn.monster.goblin.cave_5.1.goblins_lv3,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_5,1,goblins_lv4,spawn.monster.goblin.cave_5.1.goblins_lv4,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_5,1,goblins_lv5,spawn.monster.goblin.cave_5.1.goblins_lv5,gb_goblin@0.0.0/gb_goblin@-5.0.0/gb_goblin@5.0.0/gb_goblin@0.0.-5/gb_goblin@0.0.5
+spawn,monster,goblin,cave_1,2,goblins_lv1,spawn.monster.goblin.cave_1.2.goblins_lv1,gb_goblin@1@-25.-39.11/gb_goblin_archer@1@-10.-40.16/gb_goblin_outlaw@1@-18.-40.-5/gb_goblin@0.0.-5/gb_goblin@1@5.-41.7
+spawn,monster,goblin,cave_1,2,goblins_lv2,spawn.monster.goblin.cave_1.2.goblins_lv2,gb_goblin@2@-25.-39.11/gb_goblin_archer@2@-10.-40.16/gb_goblin_outlaw@2@-18.-40.-5/gb_goblin@0.0.-5/gb_goblin@2@5.-41.7
+spawn,monster,goblin,cave_1,2,goblins_lv3,spawn.monster.goblin.cave_1.2.goblins_lv3,gb_goblin@3@-25.-39.11/gb_goblin_archer@3@-10.-40.16/gb_goblin_outlaw@3@-18.-40.-5/gb_goblin@0.0.-5/gb_goblin@3@5.-41.7
+spawn,monster,goblin,cave_1,2,goblins_lv4,spawn.monster.goblin.cave_1.2.goblins_lv4,gb_goblin@4@-25.-39.11/gb_goblin_archer@4@-10.-40.16/gb_goblin_outlaw@4@-18.-40.-5/gb_goblin@0.0.-5/gb_goblin@4@5.-41.7
+spawn,monster,goblin,cave_1,2,goblins_lv5,spawn.monster.goblin.cave_1.2.goblins_lv5,gb_goblin@5@-25.-39.11/gb_goblin_archer@5@-10.-40.16/gb_goblin_outlaw@5@-18.-40.-5/gb_goblin@0.0.-5/gb_goblin@5@5.-41.7
+spawn,monster,goblin,cave_1,3,goblins_lv1,spawn.monster.goblin.cave_1.3.goblins_lv1,"gb_goblin@1@8, -38, 13/gb_goblin_outlaw@1@15, -38, 17"
+spawn,monster,goblin,cave_1,3,goblins_lv2,spawn.monster.goblin.cave_1.3.goblins_lv2,"gb_goblin@2@8, -38, 13/gb_goblin_outlaw@2@15, -38, 17"
+spawn,monster,goblin,cave_1,3,goblins_lv3,spawn.monster.goblin.cave_1.3.goblins_lv3,"gb_goblin@3@8, -38, 13/gb_goblin_outlaw@3@15, -38, 17"
+spawn,monster,goblin,cave_1,3,goblins_lv4,spawn.monster.goblin.cave_1.3.goblins_lv4,"gb_goblin@4@8, -38, 13/gb_goblin_outlaw@4@15, -38, 17"
+spawn,monster,goblin,cave_1,3,goblins_lv5,spawn.monster.goblin.cave_1.3.goblins_lv5,"gb_goblin@5@8, -38, 13/gb_goblin_outlaw@5@15, -38, 17"

@@ -1,3 +1,4 @@
+/*
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
@@ -6,10 +7,10 @@ import kotlin.random.Random
 // CSV 매핑용 데이터 클래스
 
 data class LevelDesignData(
-    val number: Int,
     val floor: Int,
     val grade: Int,
     val concept: String,
+    val name: String,
     val monsterSpawnCoordinate: List<MonsterSpawnData>,
     val boxSpawnCoordinate: String
 )
@@ -28,8 +29,7 @@ data class TriggerInfo(
 )
 
 data class MonsterGroupSpawn(
-    val fullKey: String,
-    val probability: Float
+    val fullKey: String
 )
 
 data class SpawnGroup(
@@ -43,11 +43,12 @@ data class SpawnGroup(
 
 data class DropOffsetEntry(
     val monsterName: String,
+    val level: Int,
     val offset: Triple<Float, Float, Float>
 )
 
 data class FinalSpawnResult(
-    val position: Triple<Float, Float, Float>,
+    val triggerPosition: Triple<Float, Float, Float>,
     val triggerInfo: TriggerInfo,
     val selectedFullKey: String,
     val dropOffsets: List<DropOffsetEntry>
@@ -162,7 +163,7 @@ class MonsterSpawner(
 
     private fun parseLevelLine(line: String): LevelDesignData? {
         val columns = parseCSVLine(line)
-        if (columns.size < 6) {
+        if (columns.size < 7) {
             println("잘못된 행: $line")
             return null
         }
@@ -258,3 +259,4 @@ class MonsterSpawner(
         return result.map { it.trim() }
     }
 }
+*/

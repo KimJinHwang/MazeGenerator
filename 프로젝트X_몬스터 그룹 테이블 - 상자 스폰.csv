@@ -1,0 +1,11 @@
+group1,group2,group3,group4,group5,group5,fullKey,dropValue,insideItems
+spawn,root,chest,common,material,cave,spawn.root.chest.common.material.cave,50.00%,"food_material_0:100,food_material_1:50"
+spawn,root,chest,magic,material,cave,spawn.root.chest.magic.material.cave,50.00%,"food_material_0:100,food_material_1:50"
+spawn,root,chest,rare,material,cave,spawn.root.chest.rare.material.cave,50.00%,"food_material_0:100,food_material_1:50"
+spawn,root,chest,legendary,material,cave,spawn.root.chest.legendary.material.cave,50.00%,"food_material_0:100,food_material_1:50"
+spawn,root,chest,mythic,material,cave,spawn.root.chest.mythic.material.cave,50.00%,"food_material_0:100,food_material_1:50"
+spawn,root,chest,common,equipment,cave,spawn.root.chest.common.equipment.cave,25.00%,"equipment.armor.common:100,equipment.armor.magic:10"
+spawn,root,chest,magic,equipment,cave,spawn.root.chest.magic.equipment.cave,25.00%,"equipment.armor.common:100,equipment.armor.magic:10"
+spawn,root,chest,rare,equipment,cave,spawn.root.chest.rare.equipment.cave,25.00%,"equipment.armor.common:100,equipment.armor.magic:10"
+spawn,root,chest,legendary,equipment,cave,spawn.root.chest.legendary.equipment.cave,25.00%,"equipment.armor.common:100,equipment.armor.magic:10"
+spawn,root,chest,mythic,equipment,cave,spawn.root.chest.mythic.equipment.cave,25.00%,"equipment.armor.common:100,equipment.armor.magic:10"
