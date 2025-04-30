@@ -28,6 +28,6 @@ fun main() {
     val results = spawner.getFinalSpawnResults(targetFloor = 1, targetGrade = 3)
     results.forEach { println(it) }
 
-    val chestResults = spawner.getChestSpawnResults(1, 1)
+    val chestResults = spawner.getChestSpawnResults(1, 3)
     chestResults.forEach { println(it) }
 }
