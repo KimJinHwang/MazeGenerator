@@ -4,11 +4,11 @@ import kotlin.random.Random
 private val CSV_SPLIT_REGEX = ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*\$)".toRegex()
 
 // — 데이터 모델 —
-data class LevelDesign(val floor: Int, val grade: Int, val spawnCoordsRaw: String, val chestCoordsRaw: String)
+data class LevelDesign(val floor: Int, val grade: Int, val fileName: String, val spawnCoordsRaw: String, val chestCoordsRaw: String)
 data class MonsterSpawn(val fullKey: String, val dropOffsetsRaw: String)
 data class MonsterDetail(val monsterType: String, val level: Int, val location: String)
 data class TriggerInfo(val repeatType: String, val shape: String, val size: Int, val condition: String)
-data class SpawnDetail(val triggerLocation: String, val triggerInfo: TriggerInfo, val monsterDetails: List<MonsterDetail>)
+data class SpawnDetail(val fileName: String, val triggerLocation: String, val triggerInfo: TriggerInfo, val monsterDetails: List<MonsterDetail>)
 data class ChestSpawn(val fullKey: String, val dropValue: Double, val insideItemsRaw: String)
 data class ChestSpawnDetail(val direction: String, val location: String, val appears: Boolean, val spawnedItemKey: String?)
 
@@ -35,15 +35,17 @@ class MonsterItemSpawner(levelDesignFile: File, monsterSpawnFile: File, chestSpa
         val (header, rows) = readCsvWithHeader(file)
         val floorIdx = header.indexOf("층")
         val gradeIdx = header.indexOf("등급")
+        val fileIdx = header.indexOf("파일명")
         val spawnIdx = header.indexOf("몬스터 등장좌표")
         val chestIdx = header.indexOf("상자 등장좌표")
 
         rows.forEach { tokens ->
             val floor = tokens.getOrNull(floorIdx)?.toIntOrNull() ?: return@forEach
             val grade = tokens.getOrNull(gradeIdx)?.toIntOrNull() ?: return@forEach
+            val fileName = tokens.getOrNull(fileIdx) ?: ""
             val spawnRaw = tokens.getOrNull(spawnIdx) ?: ""
             val chestRaw = tokens.getOrNull(chestIdx) ?: ""
-            levelDesignList.add(LevelDesign(floor, grade, spawnRaw, chestRaw))
+            levelDesignList.add(LevelDesign(floor, grade, fileName, spawnRaw, chestRaw))
         }
     }
 
@@ -77,7 +79,10 @@ class MonsterItemSpawner(levelDesignFile: File, monsterSpawnFile: File, chestSpa
     fun getFinalSpawnResults(targetFloor: Int, targetGrade: Int): List<SpawnDetail> {
         val design = levelDesignList.find { it.floor == targetFloor && it.grade == targetGrade } ?: return emptyList()
 
-        return design.spawnCoordsRaw.split(",").mapNotNull { coordRaw ->
+        return design.spawnCoordsRaw.split(",").mapNotNull { raw ->
+            // 양끝 쌍따옴표 제거
+            val coordRaw = raw.trim().trim('"')
+
             val parts = coordRaw.split(":")
             if (parts.size != 3) return@mapNotNull null
             val (loc, infoRaw, key) = parts
@@ -92,7 +97,8 @@ class MonsterItemSpawner(levelDesignFile: File, monsterSpawnFile: File, chestSpa
             }
 
             val spawn = monsterSpawnMap[key] ?: return@mapNotNull null
-            val details = spawn.dropOffsetsRaw.split("/").mapNotNull { offset ->
+            val dropClean = spawn.dropOffsetsRaw.trim().trim('"')
+            val details = dropClean.split("/").mapNotNull { offset ->
                 val seg = offset.split("@")
                 if (seg.size != 3) return@mapNotNull null
                 val (type, lvlStr, position) = seg
@@ -100,14 +106,16 @@ class MonsterItemSpawner(levelDesignFile: File, monsterSpawnFile: File, chestSpa
                 MonsterDetail(type, lvl, position)
             }
 
-            SpawnDetail(loc, triggerInfo, details)
+            SpawnDetail(design.fileName, loc, triggerInfo, details)
         }
     }
 
     fun getChestSpawnResults(targetFloor: Int, targetGrade: Int): List<ChestSpawnDetail> {
         val design = levelDesignList.find { it.floor == targetFloor && it.grade == targetGrade } ?: return emptyList()
 
-        return design.chestCoordsRaw.split(",").mapNotNull { chestRaw ->
+        return design.chestCoordsRaw.split(",").mapNotNull { raw ->
+            // 양끝 쌍따옴표 제거
+            val chestRaw = raw.trim().trim('"')
             val (direction, loc, key) = chestRaw.split(":").takeIf { it.size == 3 } ?: return@mapNotNull null
             val chest = chestSpawnMap[key] ?: return@mapNotNull null
             val appears = Random.nextDouble(0.0, 100.0) <= chest.dropValue

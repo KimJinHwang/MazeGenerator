@@ -38,11 +38,11 @@
         {
           "name": "CreateRandomDungeon-1.0-SNAPSHOT.jar",
           "url": "CreateRandomDungeon-1.0-SNAPSHOT.jar",
-          "size": 48252,
-          "sha512": "1b83a1ae1b1ba15c037002bb328a2f522ee888ffba31e21adf957cc4549fec54b7f607a20f0933404e1e377a7b797ad2e8005d6f317dffb8af1e7ff4f3baa7fa",
-          "sha256": "c33d8dea81c83c25a776f45bc47f10c94fe8a9b8d119f0ef90d570f20c6b7ab7",
-          "sha1": "54681f07886d5628af04e5be110b8680a818a021",
-          "md5": "f2540f29287afc8ee0a51d61abfbad9d"
+          "size": 48694,
+          "sha512": "9a640bb12853db6ec92ed16ca8542db39c2f36e5790d85cc650033272fc2b233e4ba4c8dd5f5745cbb71efe914228888ef613a46aaa6377e86522e5adda372ac",
+          "sha256": "b07f15c7823da02451075685e007d290f73424b340525f81d9016b8e9fddafee",
+          "sha1": "06597867f4a0edac1df84bc640eae6230eaabce8",
+          "md5": "84c28b1581887c30db3231a88f4c0c3e"
         }
       ]
     },
@@ -77,11 +77,11 @@
         {
           "name": "CreateRandomDungeon-1.0-SNAPSHOT.jar",
           "url": "CreateRandomDungeon-1.0-SNAPSHOT.jar",
-          "size": 48252,
-          "sha512": "1b83a1ae1b1ba15c037002bb328a2f522ee888ffba31e21adf957cc4549fec54b7f607a20f0933404e1e377a7b797ad2e8005d6f317dffb8af1e7ff4f3baa7fa",
-          "sha256": "c33d8dea81c83c25a776f45bc47f10c94fe8a9b8d119f0ef90d570f20c6b7ab7",
-          "sha1": "54681f07886d5628af04e5be110b8680a818a021",
-          "md5": "f2540f29287afc8ee0a51d61abfbad9d"
+          "size": 48694,
+          "sha512": "9a640bb12853db6ec92ed16ca8542db39c2f36e5790d85cc650033272fc2b233e4ba4c8dd5f5745cbb71efe914228888ef613a46aaa6377e86522e5adda372ac",
+          "sha256": "b07f15c7823da02451075685e007d290f73424b340525f81d9016b8e9fddafee",
+          "sha1": "06597867f4a0edac1df84bc640eae6230eaabce8",
+          "md5": "84c28b1581887c30db3231a88f4c0c3e"
         }
       ]
     }
