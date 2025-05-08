@@ -25,9 +25,6 @@ fun main() {
         File("프로젝트X_몬스터 그룹 테이블 - 상자 스폰.csv")
     )
 
-    val results = spawner.getFinalSpawnResults(targetFloor = 1, targetGrade = 3)
-    results.forEach { println(it) }
-
-    val chestResults = spawner.getChestSpawnResults(1, 3)
-    chestResults.forEach { println(it) }
+    val results = spawner.getCombinedResult(targetFloor = 1, targetGrade = 3)
+    println(results)
 }

@@ -8,9 +8,10 @@ data class LevelDesign(val floor: Int, val grade: Int, val fileName: String, val
 data class MonsterSpawn(val fullKey: String, val dropOffsetsRaw: String)
 data class MonsterDetail(val monsterType: String, val level: Int, val location: String)
 data class TriggerInfo(val repeatType: String, val shape: String, val size: Int, val condition: String)
-data class SpawnDetail(val fileName: String, val triggerLocation: String, val triggerInfo: TriggerInfo, val monsterDetails: List<MonsterDetail>)
-data class ChestSpawn(val fullKey: String, val dropValue: Double, val insideItemsRaw: String)
-data class ChestSpawnDetail(val direction: String, val location: String, val appears: Boolean, val spawnedItemKey: String?)
+data class SpawnDetail(val triggerLocation: String, val triggerInfo: TriggerInfo, val monsterDetails: List<MonsterDetail>)
+data class ChestSpawn(val fullKey: String, val dropValue: Double, val spawnObjectName: String, val insideItemsRaw: String)
+data class ChestSpawnDetail(val direction: String, val location: String, val appears: Boolean, val spawnObjectName: String, val spawnedItemKey: String?)
+data class FinalResult(val fileName: String, val spawnDetails: List<SpawnDetail>, val chestSpawnDetails: List<ChestSpawnDetail>)
 
 class MonsterItemSpawner(levelDesignFile: File, monsterSpawnFile: File, chestSpawnFile: File) {
     private val levelDesignList = mutableListOf<LevelDesign>()
@@ -65,15 +66,30 @@ class MonsterItemSpawner(levelDesignFile: File, monsterSpawnFile: File, chestSpa
         val (header, rows) = readCsvWithHeader(file)
         val keyIdx = header.indexOf("fullKey")
         val dropIdx = header.indexOf("dropValue")
+        val spawnObjectIdx = header.indexOf("spawnObjectName")
         val itemsIdx = header.indexOf("insideItems")
 
         rows.forEach { tokens ->
             val key = tokens.getOrNull(keyIdx) ?: return@forEach
             val dropStr = tokens.getOrNull(dropIdx)?.removeSuffix("%") ?: return@forEach
             val dropValue = dropStr.toDoubleOrNull() ?: return@forEach
+            val spawnObjectName = tokens.getOrNull(spawnObjectIdx) ?: return@forEach
             val itemsRaw = tokens.getOrNull(itemsIdx) ?: return@forEach
-            chestSpawnMap[key] = ChestSpawn(key, dropValue, itemsRaw)
+            chestSpawnMap[key] = ChestSpawn(key, dropValue, spawnObjectName, itemsRaw)
         }
+    }
+
+    fun getCombinedResult(targetFloor: Int, targetGrade: Int): FinalResult? {
+        val design = levelDesignList.find { it.floor == targetFloor && it.grade == targetGrade } ?: return null
+
+        val spawnDetails = getFinalSpawnResults(targetFloor, targetGrade)
+        val chestSpawnDetails = getChestSpawnResults(targetFloor, targetGrade)
+
+        return FinalResult(
+            fileName = design.fileName,
+            spawnDetails = spawnDetails,
+            chestSpawnDetails = chestSpawnDetails
+        )
     }
 
     fun getFinalSpawnResults(targetFloor: Int, targetGrade: Int): List<SpawnDetail> {
@@ -106,7 +122,7 @@ class MonsterItemSpawner(levelDesignFile: File, monsterSpawnFile: File, chestSpa
                 MonsterDetail(type, lvl, position)
             }
 
-            SpawnDetail(design.fileName, loc, triggerInfo, details)
+            SpawnDetail(loc, triggerInfo, details)
         }
     }
 
@@ -119,11 +135,25 @@ class MonsterItemSpawner(levelDesignFile: File, monsterSpawnFile: File, chestSpa
             val (direction, loc, key) = chestRaw.split(":").takeIf { it.size == 3 } ?: return@mapNotNull null
             val chest = chestSpawnMap[key] ?: return@mapNotNull null
             val appears = Random.nextDouble(0.0, 100.0) <= chest.dropValue
-            if (!appears) return@mapNotNull ChestSpawnDetail(direction, loc, false, null)
+            val spawnObjectName = chest.spawnObjectName
+
+            if (!appears) return@mapNotNull ChestSpawnDetail(
+                direction = direction,
+                location = loc,
+                appears = false,
+                spawnObjectName = spawnObjectName,
+                spawnedItemKey = null
+            )
 
             val weightedList = parseWeightedItems(chest.insideItemsRaw)
             val selected = pickWeightedItem(weightedList)
-            ChestSpawnDetail(direction, loc, true, selected)
+            ChestSpawnDetail(
+                direction = direction,
+                location = loc,
+                appears = true,
+                spawnObjectName = spawnObjectName,
+                spawnedItemKey = selected
+            )
         }
     }
 
