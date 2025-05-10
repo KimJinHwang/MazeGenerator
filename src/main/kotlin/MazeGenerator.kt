@@ -3,8 +3,6 @@ import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.io.File
-import java.io.BufferedReader
-import java.io.InputStreamReader
 import kotlin.math.abs
 import kotlin.random.Random
 
@@ -49,9 +47,9 @@ class MazeGenerator(private val file: File) {
         config = readConfig(file)
     }
 
-    val directions = listOf("UP", "DOWN", "LEFT", "RIGHT")
-    val dx = listOf(-1, 1, 0, 0)
-    val dy = listOf(0, 0, -1, 1)
+    private val directions = listOf("UP", "DOWN", "LEFT", "RIGHT")
+    private val dx = listOf(-1, 1, 0, 0)
+    private val dy = listOf(0, 0, -1, 1)
 
     fun createMaze() : Array<Array<Room>> {
         var map: Array<Array<Room>>
@@ -69,6 +67,12 @@ class MazeGenerator(private val file: File) {
             path = findPathWithTargetGrade(map, entrance, exit, config["TARGET_GRADE"]?.toInt() ?: 20)
         } while (path == null)
 
+        // 실제 경로에 대해 정확한 grade 재분배
+        assignPathGrades(
+            map,
+            path
+        )
+
         setMonsterRoomsAndActivatePassages(map, path)
         setFakeRooms(map, path)
         //printMap(map)
@@ -82,12 +86,12 @@ class MazeGenerator(private val file: File) {
         return map
     }
 
-    fun isValid(x: Int, y: Int): Boolean {
+    private fun isValid(x: Int, y: Int): Boolean {
         val size = config["SIZE"]?.toInt() ?: 10
         return x in 0 until size && y in 0 until size
     }
 
-    fun initializeMap(): Array<Array<Room>> {
+    private fun initializeMap(): Array<Array<Room>> {
         val size = config["SIZE"]?.toInt() ?: 10
         return Array(size) { i ->
             Array(size) { j ->
@@ -96,7 +100,7 @@ class MazeGenerator(private val file: File) {
         }
     }
 
-    fun setEntranceAndExit(map: Array<Array<Room>>): Pair<Pair<Int, Int>, Pair<Int, Int>> {
+    private fun setEntranceAndExit(map: Array<Array<Room>>): Pair<Pair<Int, Int>, Pair<Int, Int>> {
         val size = config["SIZE"]?.toInt() ?: 10
         val entrance = Pair(Random.nextInt(size), Random.nextInt(size))
         var exit: Pair<Int, Int>
@@ -108,7 +112,7 @@ class MazeGenerator(private val file: File) {
         return Pair(entrance, exit)
     }
 
-    fun placeObstacles(map: Array<Array<Room>>, entrance: Pair<Int, Int>, exit: Pair<Int, Int>) {
+    private fun placeObstacles(map: Array<Array<Room>>, entrance: Pair<Int, Int>, exit: Pair<Int, Int>) {
         val size = config["SIZE"]?.toInt() ?: 10
         val obstacleProbability = (config["OBSTACLE_PROBABILITY"]?.toFloat()?.div(100.0f)) ?: 0.2f
         var maxObstacles = (size * size * obstacleProbability).toInt()
@@ -127,7 +131,7 @@ class MazeGenerator(private val file: File) {
         }
     }
 
-    fun dfs(
+    private fun dfs(
         map: Array<Array<Room>>,
         current: Pair<Int, Int>,
         end: Pair<Int, Int>,
@@ -163,7 +167,7 @@ class MazeGenerator(private val file: File) {
         return false
     }
 
-    fun findPathWithTargetGrade(
+    private fun findPathWithTargetGrade(
         map: Array<Array<Room>>,
         start: Pair<Int, Int>,
         end: Pair<Int, Int>,
@@ -171,32 +175,68 @@ class MazeGenerator(private val file: File) {
     ): List<Pair<Int, Int>>? {
         val path = mutableListOf<Pair<Int, Int>>()
         val visited = mutableSetOf<Pair<Int, Int>>()
-        if (dfs(map, start, end, visited, path, 0, targetGrade)) {
+        val initialGrade = map[start.first][start.second].grade
+        if (dfs(map, start, end, visited, path, initialGrade, targetGrade)) {
             return path
         }
         return null
     }
 
-    fun assignGrades(map: Array<Array<Room>>, entrance: Pair<Int, Int>, exit: Pair<Int, Int>) {
+    private fun assignGrades(map: Array<Array<Room>>, entrance: Pair<Int, Int>, exit: Pair<Int, Int>) {
         val size = config["SIZE"]?.toInt() ?: 10
+        val maxRoomGrade = config["MAX_GRADE"]?.toInt() ?: 5
         val maxDistance = size * 2 - 2 // 대각선 거리의 최대값
         for (i in 0 until size) {
             for (j in 0 until size) {
-                if (map[i][j].type == RoomType.NR) {
+                if (map[i][j].type != RoomType.OR) {
                     val distanceToEntrance = abs(i - entrance.first) + abs(j - entrance.second)
                     val distanceToExit = abs(i - exit.first) + abs(j - exit.second)
                     val normalizedDistance = (distanceToEntrance + distanceToExit).toFloat() / maxDistance
-                    map[i][j].grade = (normalizedDistance * 5).toInt() // 1부터 5까지의 점수 부여
+                    map[i][j].grade = (normalizedDistance * maxRoomGrade).toInt().coerceAtLeast(1)
                 }
             }
         }
+        // 입구는 항상 grade = 1
+        map[entrance.first][entrance.second].grade = 1
+
+        // 출구에는 지금까지 계산된 등급 중 최대값을 할당
+        val maxGrade = map
+            .flatten()
+            .filter { it.type != RoomType.OR }
+            .maxOf { it.grade }
+        map[exit.first][exit.second].grade = maxGrade
     }
 
-    fun activatePassage(room: Room, direction: String) {
+    private fun assignPathGrades(map: Array<Array<Room>>, path: List<Pair<Int, Int>>) {
+        val maxGrade = config["MAX_GRADE"]!!.toInt()
+        val targetGrade = config["TARGET_GRADE"]!!.toInt()
+        val n = path.size
+        if (n < 2) return
+
+        // 1) 선형 분포로 등급 계산
+        val grades = IntArray(n) { idx ->
+            1 + (idx * (maxGrade - 1)) / (n - 1)
+        }
+
+        // 2) 합이 targetGrade를 넘으면 최소 strictly increasing 으로 대체
+        if (grades.sum() > targetGrade) {
+            for (i in 0 until n - 1) {
+                grades[i] = i + 1
+            }
+            grades[n - 1] = maxGrade
+        }
+
+        // 3) 맵에 적용
+        path.forEachIndexed { idx, (x, y) ->
+            map[x][y].grade = grades[idx]
+        }
+    }
+
+    private fun activatePassage(room: Room, direction: String) {
         room.passages[direction] = true
     }
 
-    fun setMonsterRoomsAndActivatePassages(map: Array<Array<Room>>, path: List<Pair<Int, Int>>) {
+    private fun setMonsterRoomsAndActivatePassages(map: Array<Array<Room>>, path: List<Pair<Int, Int>>) {
         for (i in path.indices) {
             val (x, y) = path[i]
             if (map[x][y].type == RoomType.ER) continue
@@ -224,7 +264,7 @@ class MazeGenerator(private val file: File) {
         }
     }
 
-    fun setFakeRooms(map: Array<Array<Room>>, path: List<Pair<Int, Int>>) {
+    private fun setFakeRooms(map: Array<Array<Room>>, path: List<Pair<Int, Int>>) {
         val visited = mutableSetOf<Pair<Int, Int>>()
         val queue = ArrayDeque<Pair<Int, Int>>()
         val fakeRoomProbability = config["FAKE_ROOM_PROBABILITY"]?.toInt() ?: 20
@@ -262,7 +302,7 @@ class MazeGenerator(private val file: File) {
         }
     }
 
-    fun printMap(map: Array<Array<Room>>) {
+    private fun printMap(map: Array<Array<Room>>) {
         val size = config["SIZE"]?.toInt() ?: 10
         val RESET = "\u001b[0m"
         val YELLOW = "\u001b[33m"
@@ -350,22 +390,57 @@ class MazeGenerator(private val file: File) {
         }
     }
 
-    fun updateMapWithSortedPath(map: Array<Array<Room>>, path: List<Pair<Int, Int>>) {
-        // 맵의 깊은 복사본 생성
-        val tempMap = deepCopyMap(map)
+    private fun updateMapWithSortedPath(map: Array<Array<Room>>, path: List<Pair<Int, Int>>) {
+        val target = config["TARGET_GRADE"]?.toInt() ?: return
+        val n = path.size
+        if (n == 0) return
 
-        val sortedPath = path.sortedBy { (x, y) -> tempMap[x][y].grade }
-        val sortedPathWithoutFirst = sortedPath.drop(1)
+        // 1. 최소 등급 1씩을 모든 방에 할당했을 때의 합 = n
+        //    남은 예산(budget)은 target - n
+        var budget = target - n
+        if (budget < 0) budget = 0
 
-        // 정렬된 경로를 따라 맵 데이터 수정
-        for ((index, position) in sortedPathWithoutFirst.withIndex()) {
-            val (sortedX, sortedY) = position
-            val (originalX, originalY) = path[index]
-            map[originalX][originalY].grade = tempMap[sortedX][sortedY].grade
+        // 2. 인접 차이를 최대 2까지 허용하기 위해 d[i] ∈ [0..2]
+        val maxDelta = 2
+        val d = IntArray(n) { 0 }
+
+        // 3. (n-i) 가중치를 가진 “코인”을 maxDelta 개수만큼 사용하여
+        //    예산을 소진하는 그리디 알고리즘
+        for (i in 1 until n) {
+            val weight = n - i
+            // 해당 위치에 사용할 수 있는 최대 개수
+            val use = minOf(maxDelta, budget / weight)
+            d[i] = use
+            budget -= use * weight
+        }
+
+        // 4. 만약 아직 예산이 남아 있다면,
+        //    뒤에서부터 (weight 작은 방향) 다시 한 번 소진 시도
+        if (budget > 0) {
+            for (i in n - 1 downTo 1) {
+                val weight = n - i
+                while (budget >= weight && d[i] < maxDelta) {
+                    d[i]++
+                    budget -= weight
+                }
+                if (budget == 0) break
+            }
+        }
+
+        // 5. map에 실제 grade 반영
+        //    - 첫 방(입구)은 기존 grade 유지 (보통 1)
+        //    - 이후 currentGrade += d[i] 로만 변경 → 감소 절대 없음
+        val (sx, sy) = path[0]
+        var currentGrade = map[sx][sy].grade
+
+        for (i in 1 until n) {
+            currentGrade += d[i]
+            val (x, y) = path[i]
+            map[x][y].grade = currentGrade
         }
     }
 
-    fun readConfig(file: File): Map<String, String> {
+    private fun readConfig(file: File): Map<String, String> {
         val configMap = mutableMapOf<String, String>()
         file.forEachLine { line ->
             val trimmedLine = line.trim()

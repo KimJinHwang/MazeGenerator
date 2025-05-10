@@ -2,9 +2,9 @@ import java.io.File
 
 fun main() {
 //    MazeGenerator 사용예제
-//    val configFile = File("config.csv")
-//    val mazeGenerator = MazeGenerator(configFile)
-//    val maze = mazeGenerator.createMaze()
+    val configFile = File("config.csv")
+    val mazeGenerator = MazeGenerator(configFile)
+    val maze = mazeGenerator.createMaze()
 
 //    Monsterspawner 사용예제
 //    val mazeSpawnFile = File("mazeSpawnTable(1.0.1)_20250318_1653.csv")
@@ -19,12 +19,12 @@ fun main() {
 //    }
 
 //    MonsterSpawner_latest 사용예제
-    val spawner = MonsterItemSpawner(
-        File("프로젝트X_몬스터 그룹 테이블 - 층별 레벨 디자인.csv"),
-        File("프로젝트X_몬스터 그룹 테이블 - 몬스터 스폰.csv"),
-        File("프로젝트X_몬스터 그룹 테이블 - 상자 스폰.csv")
-    )
-
-    val results = spawner.getCombinedResult(targetFloor = 1, targetGrade = 3)
-    println(results)
+//    val spawner = MonsterItemSpawner(
+//        File("프로젝트X_몬스터 그룹 테이블 - 층별 레벨 디자인.csv"),
+//        File("프로젝트X_몬스터 그룹 테이블 - 몬스터 스폰.csv"),
+//        File("프로젝트X_몬스터 그룹 테이블 - 상자 스폰.csv")
+//    )
+//
+//    val results = spawner.getCombinedResult(targetFloor = 1, targetGrade = 3)
+//    println(results)
 }
